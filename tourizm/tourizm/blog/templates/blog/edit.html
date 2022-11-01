@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-
+    <form method="POST">
+        {% csrf_token %}
+        Имя
+        {{ form.name }}
+        Фамилия
+        {{ form.surname }}
+        Эл.почта
+        {{ form.email }}
+        Телефон
+        {{ form.phone }}
+        <button>Изменить</button>
+    </form>
+    <a href="{% url 'index' %}">Главная</a>
 </body>
 </html>

@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
 
-</body>
-</html>
+{% block content %}
+{% if cat_selected != 0 %}
+<ul>
+    {% for p in posts %}
+    <li>
+        <a href="{{ p.get_absolut_url }}">
+            <h2>{{ p.title }}</h2>
+            <img src="{{ p.photo.url }}">
+            <p>{{ p.content }}</p>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-
+    <div class="login">
+        <div class="login_text1">
+            <h1>Войти</h1>
+        </div>
+        <h2>{{ error }}</h2>
+        <div class="login_text2">
+            <form method="post" class="bg">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="center">
+                    <button class="btn">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

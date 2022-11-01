@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
+    <div>
+        <a href="{% url 'index' %}">Главная</a>
+    </div>
+  <div class="wrap">
+    <div class="block">
+            <div class="elem">
+                <h2>Погода в вашем городе</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="city" placeholder="Введите город" class="city">
+                    <br>
+                    <input type="submit" name="send" value="Узнать" class="but">
+                </form>
+            </div>
+            <div class="elem">
+                <h2>Информация о погоде</h2>
+                <div class="info">
+                    <p class="data">
+                        <b>Город:</b> {{ city }}<br>
+                        <b>Температура:</b> {{ res_city }}
+                    </p>
+                </div>
+            </div>
+    </div>
 
+</div>
 </body>
 </html>

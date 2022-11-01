@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-
+    <form action="{% url 'thanks_page' %}" method="POST">
+        {% csrf_token %}
+        Имя
+        {{ form_crm.name }}
+        Телефон
+        {{ form_crm.phone }}
+        Страна
+        {{ form_crm.country }}
+        Город
+        {{ form_crm.city }}
+        <button>Отправить</button>
+    </form>
+    <a href="{% url 'index' %}">Главная</a>
 </body>
 </html>

@@ -1,10 +1,67 @@
+{% load static %}
+{% load blog_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
+    <div class="main-menu">
+        <ul>
+            {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'lk' %}">
+                    Личный кабинет
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'crm' %}">
+                    Оставить заявку
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'weather' %}">
+                    Просмотр погоды в городе
+                </a>
+            </li>
+            <li>
+                <form action="{% url 'logoutuser' %}" method="post">
+                    {% csrf_token %}
+                    <button class="btn">Выйти</button>
+                </form>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'loginuser' %}">
+                    Войти
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'signupuser' %}">
+                    Регистрация
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'weather' %}">
+                    Просмотр погоды в городе
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    <div>
+<!--        {% if cat_selected == 0 %}-->
+<!--        <li>Все категории</li>-->
+<!--        {% else %}-->
+<!--        <li><a href="{% url 'index' %}">Все категории</a></li>-->
+<!--        {% endif %}-->
+        {% show_categories cat_selected=cat_selected %}
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>

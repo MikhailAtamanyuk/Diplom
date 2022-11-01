@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% for c in cats %}
+    {% if c.pk == cat_selected %}
+    <li>{{ c.name }}</li>
+    {% else %}
+    <li><a href="{{ c.get_absolut_url }}">{{ c.name }}</a></li>
+    {% endif %}
+{% endfor %}

@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+{% if db_lk.first_name == '4' %}
+<div>
+    <a href="{% url 'edit' %}">Добавить данные пользователя</a>
+</div>
+<div>
+    <a href="{% url 'index' %}">Главная</a>
+</div>
+{% else %}
+{{ db_lk.first_name }}
+{{ db_lk.second_name }}
+{{ db_lk.email_user }}
+{{ db_lk.phone_user }}
 
+<div>
+    <a href="{% url 'edit' %}">Изменить</a>
+</div>
+
+<div>
+    <a href="{% url 'index' %}">Главная</a>
+</div>
+{% endif %}
 </body>
 </html>
