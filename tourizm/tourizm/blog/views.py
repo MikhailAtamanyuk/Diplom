@@ -2,11 +2,6 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import *
 
-# menu = [
-#     {'title': 'Добавить статью', 'url_name': 'index'},
-#     {'title': 'Войти', 'url_name': 'index'}
-# ]
-
 
 class BlogCity(ListView):
     model = City
@@ -17,7 +12,6 @@ class BlogCity(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Главная страница'
         context['cat_selected'] = 0
-        # context['menu'] = menu
         return context
 
     def get_queryset(self):
@@ -33,7 +27,6 @@ class ShowPost(DetailView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = context['post']
-        # context['menu'] = menu
         return context
 
 
@@ -49,5 +42,4 @@ class BlogCategory(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Категория - ' + str(context['posts'][0].cat)
         context['cat_selected'] = context['posts'][0].cat_id
-        # context['menu'] = menu
         return context
