@@ -1,0 +1,54 @@
+body {
+    background: url('../image/waves-c8499de3d9bf394fd4afbb3056ca97d3e729d1c7.jpeg');
+    background-size: cover;
+}
+
+.block {
+    display: flex;
+    gap: 20px;
+    background-color: #fdfdfd91;
+    border-radius: 30px;
+    width: 60%;
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.elem {
+    padding-top: 30px;
+    padding-left: 10px;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info {
+    padding-top: 55px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fccb4680;
+    border-radius: 30px;
+    height: 80px;
+    width: 200px;
+    color: #000;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-decoration: none;
+}
+
+.container-button a {
+    text-decoration: none;
+    color: #000
+}
+
+.container-button a:hover {
+    color: white;
+}

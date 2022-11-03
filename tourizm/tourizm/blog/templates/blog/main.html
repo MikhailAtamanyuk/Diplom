@@ -1,0 +1,83 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load blog_tags %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block maincontent %}
+    <div class="main-menu">
+        <div class="block-list">
+            {% if user.is_authenticated %}
+            <div class="block-list-menu">
+                <ul class="block-list-menu-lk">
+                    <li>
+                        <a href="{% url 'index' %}" class="text-link">Главная</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'lk' %}" class="text-link">
+                            Личный кабинет
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'crm' %}" class="text-link">
+                            Оставить заявку
+                        </a>
+                    </li>
+                </ul>
+                <ul class="block-list-menu-button">
+                    <li>
+                        <form action="{% url 'logoutuser' %}" method="post">
+                            {% csrf_token %}
+                            <a class="btn" href="{% url 'logoutuser' %}">Выйти</a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <ul class="block-weather">
+                <li class="block-weather-list">
+                    <a href="{% url 'weather' %}" class="text-link-sun">
+                        Погода в вашем городе
+                    </a>
+                </li>
+            </ul>
+            {% else %}
+            <ul class="block-list-register">
+                <li class="list-user-is-not-authenticated-entry">
+                    <a href="{% url 'index' %}" class="text-link">Главная</a>
+                </li>
+                <li class="list-user-is-not-authenticated-entry">
+                    <a href="{% url 'loginuser' %}" class="text-link">
+                        Войти
+                    </a>
+                    <a href="{% url 'signupuser' %}" class="text-link">
+                        Регистрация
+                    </a>
+                </li>
+            </ul>
+            <ul class="block-weather">
+                <li class="block-weather-list">
+                    <a href="{% url 'weather' %}" class="text-link-sun">
+                        Погода в вашем городе
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    <div class="block_categories">
+        {% show_categories cat_selected=cat_selected %}
+    </div>
+    <div class="content">
+        <div class="expectation">
+            <div class="expectation-inner-block">
+                <h1 class="text-name-site">GrandLuggage</h1>
+                <p class="waiting-text">Сайт о туризме. О странах, о путешествиях, отелях.</p>
+            </div>
+            <img src="{% static 'image/BfB3.gif' %}" alt="Картинка не найдена" class="waiting-picture">
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+{% endblock %}

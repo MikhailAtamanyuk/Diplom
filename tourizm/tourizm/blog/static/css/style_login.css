@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: url('../image/waves-c8499de3d9bf394fd4afbb3056ca97d3e729d1c7.jpeg');
+    background-size: cover;
+}
+
+.block__login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block__register {
+    margin-top: 150px;
+    background-color: #fdfdfd91;
+    border-radius: 30px;
+    width: 800px;
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.login {
+    margin-top: 30px;
+    background-color: #fdfdfd91;
+    border-radius: 30px;
+    width: 400px;
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.login_text1 {
+    text-align: center;
+}
+
+.login_text2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.block__header__text {
+    font-family: 'Oswald', sans-serif;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bg p {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.register p {
+    width: 500px;
+}
+
+.register ul {
+    padding-left: 100px;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-decoration: none;
+}
+
+.container-button a {
+    text-decoration: none;
+    color: #000
+}
+
+.container-button a:hover {
+    color: white;
+}

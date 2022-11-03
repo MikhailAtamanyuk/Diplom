@@ -1,14 +1,15 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/main.html' %}
+{% load static %}
 
 {% block content %}
 {% if cat_selected != 0 %}
-<ul>
+
+<ul class="main-content">
     {% for p in posts %}
-    <li>
+    <li class="container-in-content">
         <a href="{{ p.get_absolut_url }}">
-            <h2>{{ p.title }}</h2>
+            <h2 class="text-title-post">{{ p.title }}</h2>
             <img src="{{ p.photo.url }}">
-            <p>{{ p.content }}</p>
         </a>
     </li>
     {% endfor %}

@@ -1,22 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Изменение данных пользователя</title>
+    <link rel="stylesheet" href="{% static 'css/style-lk.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;
+        0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <form method="POST">
-        {% csrf_token %}
-        Имя
-        {{ form.name }}
-        Фамилия
-        {{ form.surname }}
-        Эл.почта
-        {{ form.email }}
-        Телефон
-        {{ form.phone }}
-        <button>Изменить</button>
+        <div class="container">
+            <div class="container-lk">
+                <div class="left-block">
+                    <p>Имя:</p>
+                    <p>Фамилия:</p>
+                    <p>Почта:</p>
+                    <p>Телефон:</p>
+                </div>
+                <div class="right-block-for-change ">
+                    {% csrf_token %}
+                    {{ form.name }}
+                    {{ form.surname }}
+                    {{ form.email }}
+                    {{ form.phone }}
+                    <button>Добавить данные</button>
+                </div>
+            </div>
+        </div>
     </form>
-    <a href="{% url 'index' %}">Главная</a>
+    <div class="container-button">
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'lk' %}">Отменить</a>
+    </div>
 </body>
 </html>

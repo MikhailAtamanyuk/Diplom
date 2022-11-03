@@ -1,7 +1,13 @@
+{% load static %}
+
 {% for c in cats %}
     {% if c.pk == cat_selected %}
-    <li>{{ c.name }}</li>
+    <li class="block__in__categories"><p>{{ c.name }}</p></li>
     {% else %}
-    <li><a href="{{ c.get_absolut_url }}">{{ c.name }}</a></li>
+    <a href="{{ c.get_absolut_url }}" class="text__name__country">
+        <li class="block__in__categories">
+            <p>{{ c.name }}</p>
+        </li>
+    </a>
     {% endif %}
 {% endfor %}

@@ -41,16 +41,16 @@ li {
     display: flex;
     margin: 10px;
     gap: 10px;
-    background-color: #fdfdfd71;
+    background-color: #fdfdfd91;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
 }
 
 .list-user-is-not-authenticated-entry {
-    padding: 10px;
     display: flex;
     gap: 30px;
+    padding: 10px;
 }
 
 .list-user-is-not-authenticated-register {
@@ -58,7 +58,7 @@ li {
 }
 
 .block-list-menu-lk {
-    width: 350px;
+    width: 270px;
     display: flex;
     padding-left: 10px;
     justify-content: space-between;
@@ -69,7 +69,7 @@ li {
     margin-top: 10px;
     height: 35px;
     width: 180px;
-    background-color: #fdfdfd71;
+    background-color: #fdfdfd91;
     display: flex;
     justify-content:center;
     align-items:center;
@@ -136,6 +136,8 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: #fccb4680;
 }
 
 .block_categories {
@@ -217,11 +219,15 @@ li {
 }
 
 .content-of-post{
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
     width: 80%;
+}
+
+.text-content-of-post {
+
 }
 
 .content-header {
@@ -252,56 +258,5 @@ li {
 }
 
 .expectation {
-    height: 400px;
-    width: -webkit-fill-available;
-    background-color: #fccb4680;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-}
-
-.waiting-text {
-    width: 900px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    text-align: center;
-}
-
-.waiting-picture {
-    width: 200px;
-}
-
-.text-title-post {
-    text-align: center;
-}
-
-.text-name-site {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
-    height:100px;
-    width: 900px;
-    background: linear-gradient(-45deg, white, #23a6d5, #23d5ab);
-    color: white;
-    animation: gradient 30s ease infinite;
-    font-family: 'Oswald', sans-serif;
-    font-size: 70px;
-    font-weight: 800;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    display: none;
 }

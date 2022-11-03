@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: url('../image/waves-c8499de3d9bf394fd4afbb3056ca97d3e729d1c7.jpeg');
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.container-lk {
+    box-shadow: 0px 0px 10px 0px black;
+    background-color: #fdfdfd91;
+    border-radius: 30px;
+    display: flex;
+    justify-content: start;
+    height: 250px;
+    width: 500px;
+    gap: 20px;
+}
+
+.container-lk p {
+    padding-top: 30px;
+    padding-left: 30px;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.right-block {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: linear-gradient(#fdfdfd00 7%, #fccb4680 0%);
+    height: 87%;
+    width: 100%;
+}
+
+.block-content {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: linear-gradient(#9ad9ea 7%, wheat 0%);
+    height: 87%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-content a {
+    text-decoration: none;
+    color: black;
+}
+
+.block-content a:hover {
+    color:white;
+}
+
+.right-block-for-change {
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28.5px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: linear-gradient(#fdfdfd00 7%, #fccb4680 0%);
+    height: 87%;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.right-block-for-change input {
+    width: 300px;
+}
+
+.right-block p {
+    color: #000;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-decoration: none;
+}
+
+.container-button a {
+    text-decoration: none;
+    color: #000
+}
+
+.container-button a:hover {
+    color: white;
+}
+
+.right-block-for-change button {
+    margin-top: -20px;
+    width: 80px;
+}

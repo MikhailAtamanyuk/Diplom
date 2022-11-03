@@ -1,7 +1,16 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/main.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style-off.css' %}">
+{% endblock %}
 
 {% block content %}
-<p>{{ post.title }}</p>
-<img src="{{ post.photo.url }}">
-{{ post.content }}
+<div class="content-of-post">
+    <p class="text-content-of-post">{{ post.content }}</p>
+    <div class="content-header">
+        <h1>{{ post.title }}</h1>
+        <img src="{{ post.photo.url }}">
+    </div>
+</div>
 {% endblock %}

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Спасибо за заявку</title>
+    <title>Успешно</title>
     <link rel="stylesheet" href="{% static 'css/style-lk.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,11 @@
 </head>
 <body>
     <div class="container">
-            <div class="container-lk">
-                <p>Ваша заявка принята! В ближайшее время с Вами свяжется менеджер.</p>
+        <div class="container-lk">
+            <div class="left-block">
+                <p>Ваши данные добавлены успешно</p>
             </div>
+        </div>
     </div>
     <div class="container-button">
         <a href="{% url 'index' %}">Главная</a>
