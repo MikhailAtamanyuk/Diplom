@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'pesonal_account.apps.PesonalAccountConfig',
+    'crm.apps.CrmConfig',
+    'bot.apps.Telebot1Config',
+    'weather.apps.WeatherConfig',
 ]
 
 MIDDLEWARE = [
